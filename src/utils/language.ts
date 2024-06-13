@@ -1,12 +1,12 @@
 // ISO-639-1 + Country Code (Option)
 // https://zh.wikipedia.org/wiki/ISO_639-1%E4%BB%A3%E7%A0%81%E8%A1%A8
 export const languageList = [
+    'ko',
+    'en',
+    'ja',
     'zh_cn',
     'zh_tw',
     'mn_mo',
-    'en',
-    'ja',
-    'ko',
     'fr',
     'es',
     'ru',
@@ -34,12 +34,12 @@ export const languageList = [
 
 // https://flagicons.lipis.dev/
 export enum LanguageFlag {
+    ko = 'kr',
+    en = 'gb',
+    ja = 'jp',
     zh_cn = 'cn',
     zh_tw = 'cn',
     mn_mo = 'cn',
-    en = 'gb',
-    ja = 'jp',
-    ko = 'kr',
     fr = 'fr',
     es = 'es',
     ru = 'ru',

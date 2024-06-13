@@ -34,7 +34,7 @@ export default function General() {
     const [appFallbackFont, setAppFallbackFont] = useConfig('app_fallback_font', 'default');
     const [appFontSize, setAppFontSize] = useConfig('app_font_size', 16);
     const [transparent, setTransparent] = useConfig('transparent', true);
-    const [trayClickEvent, setTrayClickEvent] = useConfig('tray_click_event', 'config');
+    const [trayClickEvent, setTrayClickEvent] = useConfig('tray_click_event', 'translate'); //config
     const [proxyEnable, setProxyEnable] = useConfig('proxy_enable', false);
     const [proxyHost, setProxyHost] = useConfig('proxy_host', '');
     const [proxyPort, setProxyPort] = useConfig('proxy_port', '');
@@ -46,11 +46,11 @@ export default function General() {
     const toastStyle = useToastStyle();
 
     const languageName = {
-        zh_cn: '简体中文',
-        zh_tw: '繁體中文',
+        ko: '한국어',
         en: 'English',
         ja: '日本語',
-        ko: '한국어',
+        zh_cn: '简体中文',
+        zh_tw: '繁體中文',
         fr: 'Français',
         es: 'Español',
         ru: 'Русский',
@@ -167,6 +167,18 @@ export default function General() {
                                     }}
                                 >
                                     <DropdownItem
+                                        key='ko'
+                                        startContent={<span className={`fi fi-${LanguageFlag.ko}`} />}
+                                    >
+                                        한국어
+                                    </DropdownItem>
+                                    <DropdownItem
+                                        key='en'
+                                        startContent={<span className={`fi fi-${LanguageFlag.en}`} />}
+                                    >
+                                        English
+                                    </DropdownItem>
+                                    <DropdownItem
                                         key='zh_cn'
                                         startContent={<span className={`fi fi-${LanguageFlag.zh_cn}`} />}
                                     >
@@ -179,22 +191,10 @@ export default function General() {
                                         繁體中文
                                     </DropdownItem>
                                     <DropdownItem
-                                        key='en'
-                                        startContent={<span className={`fi fi-${LanguageFlag.en}`} />}
-                                    >
-                                        English
-                                    </DropdownItem>
-                                    <DropdownItem
                                         key='ja'
                                         startContent={<span className={`fi fi-${LanguageFlag.ja}`} />}
                                     >
                                         日本語
-                                    </DropdownItem>
-                                    <DropdownItem
-                                        key='ko'
-                                        startContent={<span className={`fi fi-${LanguageFlag.ko}`} />}
-                                    >
-                                        한국어
                                     </DropdownItem>
                                     <DropdownItem
                                         key='fr'

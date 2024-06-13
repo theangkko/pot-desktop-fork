@@ -15,18 +15,18 @@ import { invoke } from '@tauri-apps/api';
 
 export default function Translate() {
     const [sourceLanguage, setSourceLanguage] = useConfig('translate_source_language', 'auto');
-    const [targetLanguage, setTargetLanguage] = useConfig('translate_target_language', 'zh_cn');
+    const [targetLanguage, setTargetLanguage] = useConfig('translate_target_language', 'kr'); //zh_cn
     const [secondLanguage, setSecondLanguage] = useConfig('translate_second_language', 'en');
-    const [detectEngine, setDetectEngine] = useConfig('translate_detect_engine', 'baidu');
+    const [detectEngine, setDetectEngine] = useConfig('translate_detect_engine', 'google');
     const [autoCopy, setAutoCopy] = useConfig('translate_auto_copy', 'disable');
     const [incrementalTranslate, setIncrementalTranslate] = useConfig('incremental_translate', false);
     const [historyDisable, setHistoryDisable] = useConfig('history_disable', false);
     const [dynamicTranslate, setDynamicTranslate] = useConfig('dynamic_translate', false);
     const [deleteNewline, setDeleteNewline] = useConfig('translate_delete_newline', false);
-    const [rememberLanguage, setRememberLanguage] = useConfig('translate_remember_language', false);
+    const [rememberLanguage, setRememberLanguage] = useConfig('translate_remember_language', true); //false
     // const [translateFontSize, setTranslateFontSize] = useConfig('translate_font_size', 16);
     const [windowPosition, setWindowPosition] = useConfig('translate_window_position', 'mouse');
-    const [rememberWindowSize, setRememberWindowSize] = useConfig('translate_remember_window_size', false);
+    const [rememberWindowSize, setRememberWindowSize] = useConfig('translate_remember_window_size', true); //false
     const [hideSource, setHideSource] = useConfig('hide_source', false);
     const [hideLanguage, setHideLanguage] = useConfig('hide_language', false);
     const [hideWindow, setHideWindow] = useConfig('translate_hide_window', false);
@@ -116,11 +116,11 @@ export default function Translate() {
                                         setDetectEngine(key);
                                     }}
                                 >
+                                    <DropdownItem key='google'>{t(`config.translate.google`)}</DropdownItem>
+                                    <DropdownItem key='bing'>{t(`config.translate.bing`)}</DropdownItem>
                                     <DropdownItem key='baidu'>{t(`config.translate.baidu`)}</DropdownItem>
                                     <DropdownItem key='tencent'>{t(`config.translate.tencent`)}</DropdownItem>
                                     <DropdownItem key='niutrans'>{t(`config.translate.niutrans`)}</DropdownItem>
-                                    <DropdownItem key='google'>{t(`config.translate.google`)}</DropdownItem>
-                                    <DropdownItem key='bing'>{t(`config.translate.bing`)}</DropdownItem>
                                     <DropdownItem key='yandex'>{t(`config.translate.yandex`)}</DropdownItem>
                                     <DropdownItem key='local'>{t(`config.translate.local`)}</DropdownItem>
                                 </DropdownMenu>

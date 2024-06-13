@@ -6,11 +6,11 @@ import { v4 as uuidv4 } from 'uuid';
 // https://fanyi-api.baidu.com/product/113
 async function baidu_detect(text) {
     const lang_map = {
-        zh: 'zh_cn',
-        cht: 'zh_tw',
+        kor: 'ko',
         en: 'en',
         jp: 'ja',
-        kor: 'ko',
+        zh: 'zh_cn',
+        cht: 'zh_tw',
         fra: 'fr',
         spa: 'es',
         ru: 'ru',
@@ -51,10 +51,10 @@ async function baidu_detect(text) {
 async function tencent_detect(text) {
 
     const lang_map = {
-        zh: 'zh_cn',
+        ko: 'ko',
         en: 'en',
         ja: 'ja',
-        ko: 'ko',
+        zh: 'zh_cn',
         fr: 'fr',
         es: 'es',
         ru: 'ru',
@@ -89,11 +89,11 @@ async function tencent_detect(text) {
 // https://cloud.google.com/translate/docs/languages?hl=zh-cn
 async function google_detect(text) {
     const lang_map = {
+        ko: 'ko',
+        en: 'en',
+        ja: 'ja',
         'zh-CN': 'zh_cn',
         'zh-TW': 'zh_tw',
-        ja: 'ja',
-        en: 'en',
-        ko: 'ko',
         fr: 'fr',
         es: 'es',
         ru: 'ru',
@@ -144,11 +144,11 @@ async function google_detect(text) {
 // https://niutrans.com/documents/contents/trans_text#languageList
 async function niutrans_detect(text) {
     const lang_map = {
-        zh: 'zh_cn',
-        cht: 'zh_cn',
+        ko: 'ko',
         en: 'en',
         ja: 'ja',
-        ko: 'ko',
+        zh: 'zh_cn',
+        cht: 'zh_cn',
         fr: 'fr',
         es: 'es',
         ru: 'ru',
@@ -190,10 +190,10 @@ async function niutrans_detect(text) {
 // https://yandex.com/dev/translate/doc/en/concepts/api-overview
 async function yandex_detect(text) {
     const lang_map = {
-        zh: 'zh_cn',
-        en: 'en',
-        ja: 'ja',
         ko: 'ko',
+        en: 'en',
+        zh: 'zh_cn',
+        ja: 'ja',
         fr: 'fr',
         es: 'es',
         ru: 'ru',
@@ -231,11 +231,11 @@ async function yandex_detect(text) {
 // https://learn.microsoft.com/en-us/azure/ai-services/translator/language-support
 async function bing_detect(text) {
     const lang_map = {
-        'zh-Hans': 'zh_cn',
-        'zh-Hant': 'zh_tw',
+        ko: 'ko',
         en: 'en',
         ja: 'ja',
-        ko: 'ko',
+        'zh-Hans': 'zh_cn',
+        'zh-Hant': 'zh_tw',
         fr: 'fr',
         es: 'es',
         ru: 'ru',
@@ -311,23 +311,23 @@ async function local_detect(text) {
 }
 
 export default async function detect(text) {
-    let langDetectEngine = (await store.get('translate_detect_engine')) ?? 'baidu';
+    let langDetectEngine = (await store.get('translate_detect_engine')) ?? 'google';
 
     switch (langDetectEngine) {
-        case 'baidu':
-            return await baidu_detect(text);
         case 'google':
             return await google_detect(text);
+        case 'bing':
+            return await bing_detect(text);
         case 'local':
             return await local_detect(text);
+        case 'baidu':
+            return await baidu_detect(text);
         case 'tencent':
             return await tencent_detect(text);
         case 'niutrans':
             return await niutrans_detect(text);
         case 'yandex':
             return await yandex_detect(text);
-        case 'bing':
-            return await bing_detect(text);
         default:
             return await local_detect(text);
     }

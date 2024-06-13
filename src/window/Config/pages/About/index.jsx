@@ -45,6 +45,16 @@ export default function About() {
                     >
                         {t('config.about.github')}
                     </Button>
+                    <Button
+                        variant='light'
+                        className='my-[5px]'
+                        size='sm'
+                        onPress={() => {
+                            open('https://github.com/theangkko/pot-desktop-fork');
+                        }}
+                    >
+                        {t('config.about.github')}
+                    </Button>
                     <Popover
                         placement='top'
                         offset={10}

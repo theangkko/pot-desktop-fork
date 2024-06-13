@@ -64,14 +64,15 @@ void listen('tauri://move', () => {
 
 export default function Translate() {
     const [closeOnBlur] = useConfig('translate_close_on_blur', true);
-    const [alwaysOnTop] = useConfig('translate_always_on_top', false);
+    const [alwaysOnTop] = useConfig('translate_always_on_top', true); //false
     const [windowPosition] = useConfig('translate_window_position', 'mouse');
-    const [rememberWindowSize] = useConfig('translate_remember_window_size', false);
+    const [rememberWindowSize] = useConfig('translate_remember_window_size', true); //
     const [translateServiceInstanceList, setTranslateServiceInstanceList] = useConfig('translate_service_list', [
+        'google',
         'deepl',
         'bing',
-        'yandex',
-        'google',
+        // "yandex":{"enable":false}
+        // 'yandex',
     ]);
     const [hideLanguage] = useConfig('hide_language', false);
     const [pined, setPined] = useState(false);
