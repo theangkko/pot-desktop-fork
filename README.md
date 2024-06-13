@@ -42,23 +42,23 @@
 
 <div align="center">
 
-# Usage
+# 사용방법
 
 </div>
 
-| Translation by selection                        | Translate by input                                                    | External calls                                                                           |
+| 선택영역 번역                        | 직접입력                                                    | 외부프로그램 활용                                                                           |
 | ----------------------------------------------- | --------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
 | Select text and press the shortcut to translate | Press shortcut to open translation window, translate by hitting Enter | More efficient workflow by integrating other apps, see [External Calls](#external-calls) |
 | <img src="asset/eg1.gif"/>                      | <img src="asset/eg2.gif"/>                                            | <img src="asset/eg3.gif"/>                                                               |
 
-| Clipboard Listening                                                                                                          | Screenshot OCR                     | Screenshot Translation                   |
+| 클립보드 복사항목 작동번역                                                                                                         | 화면캡쳐 자동인식                     | 화면캡쳐 자동번역                |
 | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------- | ---------------------------------------- |
 | Click the top left icon on any translation panel to start clipboard listening. Copied text will be translated automatically. | Press shortcut, select area to OCR | Press shortcut, select area to translate |
 | <img src="asset/eg4.gif"/>                                                                                                   | <img src="asset/eg5.gif"/>         | <img src="asset/eg6.gif"/>               |
 
 <div align="center">
 
-# Features
+# 주요기능
 
 </div>
 
@@ -74,11 +74,11 @@
 
 <div align="center">
 
-# Supported Services
+# 지원 기능 항목
 
 </div>
 
-## Translation
+## 번역
 
 -   [x] [OpenAI](https://platform.openai.com/)
 -   [x] [ChatGLM](https://www.zhipuai.cn/)
@@ -104,7 +104,7 @@
 
 More Services see [Plugin System](#plugin-system)
 
-## Text Recognize
+## 문자인식
 
 -   [x] System OCR (Offline)
     -   [x] [Windows.Media.OCR](https://learn.microsoft.com/en-us/uwp/api/windows.media.ocr.ocrengine?view=winrt-22621) on Windows
@@ -141,19 +141,19 @@ More Services see [Plugin System](#plugin-system)
 
 <div align="center">
 
-# Plugin System
+# 플러그인 시스템 Plugin System
 
 </div>
 
 The built-in services are limited. But you can expand the app's functionality through the plugin system.
 
-## Install Plugin
+## 플러그인 설치 Install Plugin
 
 You can find plugins you need in the [Plugin List](https://pot-app.com/plugin.html), and then go to the plugin repo to download it.
 
 The file extension of pot plugin is `.potext`. After downloading the `.potext` file, go to Preferences - Service Settings - Add External Plugin - Install External Plugin to select the corresponding `.potext` to install it. It will then be added to the service list and can be used like a built-in service.
 
-### Troubleshooting
+### 문제 조치 Troubleshooting
 
 -   The specified module could not be found (Windows)
 
