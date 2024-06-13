@@ -358,19 +358,19 @@ fn tray_menu_ja() -> tauri::SystemTrayMenu {
 
 fn tray_menu_ko() -> tauri::SystemTrayMenu {
     let input_translate = CustomMenuItem::new("input_translate", "입력 번역");
-    let clipboard_monitor = CustomMenuItem::new("clipboard_monitor", "감청 전단판");
+    let clipboard_monitor = CustomMenuItem::new("clipboard_monitor", "클립보드 자동인식");
     let copy_source = CustomMenuItem::new("copy_source", "원문");
     let copy_target = CustomMenuItem::new("copy_target", "번역문");
 
     let copy_source_target = CustomMenuItem::new("copy_source_target", "원문+번역문");
-    let copy_disable = CustomMenuItem::new("copy_disable", "닫기");
+    let copy_disable = CustomMenuItem::new("copy_disable", "복사 미사용");
     let ocr_recognize = CustomMenuItem::new("ocr_recognize", "문자인식");
     let ocr_translate = CustomMenuItem::new("ocr_translate", "스크린샷 번역");
     let config = CustomMenuItem::new("config", "기본 설정");
     let check_update = CustomMenuItem::new("check_update", "업데이트 확인");
-    let restart = CustomMenuItem::new("restart", "응용 프로그램 다시 시작");
+    let restart = CustomMenuItem::new("restart", "응용 프로그램 재시작");
     let view_log = CustomMenuItem::new("view_log", "로그 보기");
-    let quit = CustomMenuItem::new("quit", "퇴출");
+    let quit = CustomMenuItem::new("quit", "종료");
     SystemTrayMenu::new()
         .add_item(input_translate)
         .add_item(clipboard_monitor)
