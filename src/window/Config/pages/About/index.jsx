@@ -53,7 +53,7 @@ export default function About() {
                             open('https://github.com/theangkko/pot-desktop-myflavor');
                         }}
                     >
-                        {t('config.about.github')}
+                        Github-favor
                     </Button>
                     <Popover
                         placement='top'
