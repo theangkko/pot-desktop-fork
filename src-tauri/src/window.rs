@@ -145,8 +145,8 @@ fn translate_window() -> Window {
     let height = match get("translate_window_height") {
         Some(v) => v.as_i64().unwrap(),
         None => {
-            set("translate_window_height", 420);
-            420
+            set("translate_window_height", 520);
+            520
         }
     };
 

@@ -5,11 +5,11 @@ export const info = {
 // https://yandex.com/dev/translate/doc/en/concepts/api-overview
 export enum Language {
     auto = '',
-    zh_cn = 'zh',
-    zh_tw = 'zh',
+    ko = 'ko',
     en = 'en',
     ja = 'ja',
-    ko = 'ko',
+    zh_cn = 'zh',
+    zh_tw = 'zh',
     fr = 'fr',
     es = 'es',
     ru = 'ru',

@@ -28,14 +28,14 @@ export default function General() {
     const [fontList, setFontList] = useState(null);
     const [checkUpdate, setCheckUpdate] = useConfig('check_update', true);
     const [serverPort, setServerPort] = useConfig('server_port', 60828);
-    const [appLanguage, setAppLanguage] = useConfig('app_language', 'en');
+    const [appLanguage, setAppLanguage] = useConfig('app_language', 'kr'); //en
     const [appTheme, setAppTheme] = useConfig('app_theme', 'system');
     const [appFont, setAppFont] = useConfig('app_font', 'default');
     const [appFallbackFont, setAppFallbackFont] = useConfig('app_fallback_font', 'default');
     const [appFontSize, setAppFontSize] = useConfig('app_font_size', 16);
     const [transparent, setTransparent] = useConfig('transparent', true);
     const [devMode, setDevMode] = useConfig('dev_mode', false);
-    const [trayClickEvent, setTrayClickEvent] = useConfig('tray_click_event', 'tranlate'); //config
+    const [trayClickEvent, setTrayClickEvent] = useConfig('tray_click_event', 'translate'); //config
     const [proxyEnable, setProxyEnable] = useConfig('proxy_enable', false);
     const [proxyHost, setProxyHost] = useConfig('proxy_host', '');
     const [proxyPort, setProxyPort] = useConfig('proxy_port', '');

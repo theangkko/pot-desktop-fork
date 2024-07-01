@@ -15,7 +15,7 @@ import { invoke } from '@tauri-apps/api';
 
 export default function Translate() {
     const [sourceLanguage, setSourceLanguage] = useConfig('translate_source_language', 'en'); //auto
-    const [targetLanguage, setTargetLanguage] = useConfig('translate_target_language', 'kr'); //zh_cn
+    const [targetLanguage, setTargetLanguage] = useConfig('translate_target_language', 'ko'); //zh_cn
     const [secondLanguage, setSecondLanguage] = useConfig('translate_second_language', 'en');
     const [detectEngine, setDetectEngine] = useConfig('translate_detect_engine', 'google'); //baidu
     const [autoCopy, setAutoCopy] = useConfig('translate_auto_copy', 'disable');

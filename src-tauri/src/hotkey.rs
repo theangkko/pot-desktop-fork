@@ -47,10 +47,10 @@ pub fn register_shortcut(shortcut: &str) -> Result<(), String> {
             app_handle,
             "hotkey_selection_translate",
             selection_translate,
-            "",
+            "Shift+Alt+W",
         )?,
         "hotkey_input_translate" => {
-            register(app_handle, "hotkey_input_translate", input_translate, "")?
+            register(app_handle, "hotkey_input_translate", input_translate, "Shift+Alt+T")?
         }
         "hotkey_ocr_recognize" => register(app_handle, "hotkey_ocr_recognize", ocr_recognize, "")?,
         "hotkey_ocr_translate" => register(app_handle, "hotkey_ocr_translate", ocr_translate, "")?,
@@ -63,7 +63,7 @@ pub fn register_shortcut(shortcut: &str) -> Result<(), String> {
             )?;
             register(app_handle, "hotkey_input_translate", input_translate, "")?;
             register(app_handle, "hotkey_ocr_recognize", ocr_recognize, "")?;
-            register(app_handle, "hotkey_ocr_translate", ocr_translate, "")?;
+            register(app_handle, "hotkey_ocr_translate", ocr_translate, "Shift+Alt+S")?;
         }
         _ => {}
     }
